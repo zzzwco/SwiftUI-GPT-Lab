@@ -28,10 +28,63 @@
 import SwiftUI
 
 struct MatrixRainView: View {
+  @State private var drops: [Drop] = []
+  private let dropCount = 600 // number of drops
+  
   var body: some View {
-    Text("Hello, World!")
+    GeometryReader { gp in
+      ZStack {
+        Color.black
+          .edgesIgnoringSafeArea(.all)
+        ForEach(drops) { drop in
+          Text(String(drop.text))
+            .foregroundColor(.green)
+            .font(Font.system(size: drop.size))
+            .offset(x: drop.x, y: drop.y)
+        }
+      }
+      .onAppear {
+        for i in 0..<dropCount {
+          drops.append(
+            Drop(
+              id: i,
+              x: .random(in: -gp.size.width...gp.size.width),
+              y: .random(in: -gp.size.height...gp.size.height)
+            )
+          )
+        }
+        Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true) { _ in
+          for i in 0..<drops.count {
+            drops[i].y += drops[i].speed
+            if drops[i].y > gp.size.height {
+              drops[i].y = -gp.size.height
+              drops[i].x = CGFloat.random(in: -gp.size.width...gp.size.width)
+            }
+          }
+        }
+      }
+    }
   }
 }
+
+struct Drop: Identifiable {
+  var id: Int
+  var x: CGFloat
+  var y: CGFloat
+  var speed: CGFloat
+  var size: CGFloat
+  var text: Character
+  
+  init(id: Int, x: CGFloat, y: CGFloat) {
+    self.id = id
+    self.x = x
+    self.y = y
+    self.speed = .random(in: 2..<6)
+    self.size = .random(in: 10...20)
+    self.text = Character(UnicodeScalar(Int.random(in: 33..<127))!)
+  }
+}
+
 
 struct MatrixRainView_Previews: PreviewProvider {
   static var previews: some View {
