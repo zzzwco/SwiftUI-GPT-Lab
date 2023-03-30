@@ -15,6 +15,7 @@
 		323DBA3E29C7FA7F0075AB1B /* SwiftUI_GPT_LabUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DBA3D29C7FA7F0075AB1B /* SwiftUI_GPT_LabUITestsLaunchTests.swift */; };
 		323DBA4D29C7FBFC0075AB1B /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DBA4C29C7FBFC0075AB1B /* SplitView.swift */; };
 		323DBA5129C802880075AB1B /* MatrixRainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323DBA5029C802880075AB1B /* MatrixRainView.swift */; };
+		69E21D8129D5C9E700D7F093 /* BubblesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E21D8029D5C9E700D7F093 /* BubblesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		323DBA4C29C7FBFC0075AB1B /* SplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		323DBA5029C802880075AB1B /* MatrixRainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRainView.swift; sourceTree = "<group>"; };
 		323DBA5229C803DC0075AB1B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		69E21D8029D5C9E700D7F093 /* BubblesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubblesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				323DBA2029C7FA7D0075AB1B /* SwiftUI_GPT_LabApp.swift */,
 				323DBA4C29C7FBFC0075AB1B /* SplitView.swift */,
 				323DBA5029C802880075AB1B /* MatrixRainView.swift */,
+				69E21D8029D5C9E700D7F093 /* BubblesView.swift */,
 				323DBA2429C7FA7F0075AB1B /* Assets.xcassets */,
 				323DBA2629C7FA7F0075AB1B /* Preview Content */,
 			);
@@ -264,6 +267,7 @@
 			files = (
 				323DBA2129C7FA7D0075AB1B /* SwiftUI_GPT_LabApp.swift in Sources */,
 				323DBA4D29C7FBFC0075AB1B /* SplitView.swift in Sources */,
+				69E21D8129D5C9E700D7F093 /* BubblesView.swift in Sources */,
 				323DBA5129C802880075AB1B /* MatrixRainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

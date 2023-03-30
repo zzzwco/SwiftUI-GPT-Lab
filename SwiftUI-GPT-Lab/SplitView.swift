@@ -49,12 +49,15 @@ enum SampleType: String, CaseIterable, CustomStringConvertible {
   }
   
   case MatrixRain
+  case Bubbles
   
   @ViewBuilder
   var view: some View {
     switch self {
     case .MatrixRain:
       MatrixRainView()
+    case .Bubbles:
+      BubblesView()
     }
   }
 }
